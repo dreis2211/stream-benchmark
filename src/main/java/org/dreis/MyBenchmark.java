@@ -76,4 +76,25 @@ public class MyBenchmark {
                 .findFirst();
     }
 
+/*
+	@Benchmark
+	public Optional<SomeType> testCombinedFilter(BenchmarkState state) {
+		return state.types.stream()
+				.filter(type -> type instanceof OtherType && type.getId().equals(state.id))
+				.findFirst();
+	}
+
+	@Benchmark
+	public Optional<SomeType> testVanilla(BenchmarkState state) {
+		for (SomeType type : state.types) {
+			if (type instanceof OtherType) {
+				if (type.getId().equals(state.id)) {
+					return Optional.of(type);
+				}
+			}
+		}
+		return Optional.empty();
+	}
+*/
+
 }
